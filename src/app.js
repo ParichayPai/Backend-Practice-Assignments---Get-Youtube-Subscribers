@@ -13,8 +13,8 @@ app.get("/subscribers/names", (req, res) => {
         let arr = [];
         data.map( ele => {
             let name = ele.name;
-            let subscribered = ele.subscribedChannel;
-            arr.push({name, subscribered});
+            let subscribedChannel = ele.subscribedChannel;
+            arr.push({name, subscribedChannel});
         });
         res.send(arr);
     });
