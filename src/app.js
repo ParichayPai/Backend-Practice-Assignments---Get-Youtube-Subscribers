@@ -23,7 +23,7 @@ app.get("/subscribers/names", (req, res) => {
 app.get("/subscribers/:id", (req, res) => {
     Subscriber.find({_id: req.params.id})
         .then(data => res.send(data[0]))
-        .catch(err => res.status(400).send({message: "id does not match"}));
+        .catch(err => res.status(400).send({message: err.message}));
 })
 
 // Your code goes here
